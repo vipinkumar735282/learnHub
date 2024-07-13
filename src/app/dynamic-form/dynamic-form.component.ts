@@ -14,59 +14,70 @@ import { admissionFormConfig } from '../constants/register-form.contant';
 })
 export class DynamicFormComponent implements OnInit {
 
-  @Input() form!: IForm;
-  dynamicFormGroup: FormGroup;
-  registerForm = admissionFormConfig;
-
-  constructor(private fb: FormBuilder) {
-    this.dynamicFormGroup = this.fb.group({});
+  // [x: string]: any;
+  form!: IForm;
+  dynamicFormGroup!: FormGroup;
+  registerForm = admissionFormConfig
+   constructor(private fb: FormBuilder) {
+    // this.dynamicFormGroup = this.fb.group({});
   }
 
   ngOnInit(): void {
-    if (this.form?.formControls) {
-      let formGroup: any = {};
+    this.form= this.registerForm;
+    if (this.form && this.form.formControls) {
+      const formGroup: { [key: string]: any } = {}; 
       this.form.formControls.forEach((control: IFormControl) => {
-        let controlValidators: any = [];
-        if (control.validators) {
-          control.validators.forEach((val: IValidator) => {
-            if (val.validatorName === 'required') controlValidators.push(Validators.required);
-            if (val.validatorName === 'email') controlValidators.push(Validators.email);
-            if (val.validatorName === 'minlength') controlValidators.push(Validators.minLength(val.minlength as number));
-            if (val.validatorName === 'maxlength') controlValidators.push(Validators.maxLength(val.maxlength as number));
-            if (val.validatorName === 'pattern') controlValidators.push(Validators.pattern(val.pattern as string));
-          });
-        }
+        const controlValidators = this.getValidators(control.validators);
         formGroup[control.name] = [control.value || '', controlValidators];
       });
       this.dynamicFormGroup = this.fb.group(formGroup);
     }
   }
 
-  onSubmit() {
-    console.log(this.dynamicFormGroup.value);
+  onSubmit(): void {
+    if (this.dynamicFormGroup.valid) {
+      const formData = this.dynamicFormGroup.value;
+      console.log('Form data submitted:', formData);
+    } else {
+      console.error('Form is invalid. Cannot submit.');
+    }
   }
 
-  resetForm() {
+  resetForm(): void {
     this.dynamicFormGroup.reset();
   }
 
-  getValidationErrors(control: IFormControl): string {
-    const myFormControl = this.dynamicFormGroup.get(control.name);
-    let errorMessage = '';
-    control.validators?.forEach((val: IValidator) => {
-      if (myFormControl?.hasError(val.validatorName as string)) {
-        errorMessage = val.message as string;
+  getValidators(validators: IValidator[]): any[] {
+    const formValidators: any[] = [];
+    validators.forEach(validator => {
+      if (validator.validatorName === 'required') {
+        formValidators.push(Validators.required);
+      }
+      if (validator.validatorName === 'email') {
+        formValidators.push(Validators.email);
+      }
+      if (validator.validatorName === 'minlength') {
+        formValidators.push(Validators.minLength(validator.minlength as number));
+      }
+      if (validator.validatorName === 'maxlength') {
+        formValidators.push(Validators.maxLength(validator.maxlength as number));
+      }
+      if (validator.validatorName === 'pattern') {
+        formValidators.push(Validators.pattern(validator.pattern as string));
       }
     });
-    return errorMessage;
+    return formValidators;
   }
 
-  getErrorMessage(controlName: string): string {
-    const control = this.dynamicFormGroup.get(controlName);
-    if (control && control.touched && control.errors) {
-      const errorKey = Object.keys(control.errors)[0];
-      return control.errors[errorKey];
-    }
-    return '';
-  }
+  getValidationErrors(control: IFormControl):string{
+    const myFormControl = this.dynamicFormGroup.get(control.name);
+    let errorMessage = "";
+      control.validators?.forEach((val: IValidator) => {
+      if(myFormControl?.hasError( val.validatorName as string)){
+        errorMessage = val.message as string;
+      }
+      
+    });
+      return errorMessage;
+   }
 }
