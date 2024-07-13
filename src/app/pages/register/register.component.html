@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <div class="header">
       <h1>Post API</h1>
       <h2>Create Department, Department List</h2>
@@ -15,7 +15,8 @@
             </tr>
           </thead>
           <tbody>
-            <!-- Department rows will be added here dynamically -->
+            Department rows will be added here dynamically
+            Lorem ipsum dolor sit amet.
           </tbody>
         </table>
       </div>
@@ -37,4 +38,46 @@
         </form>
       </div>
     </div>
-  </div>
+  </div> -->
+  <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="firstName">First name</label>
+      <input id="firstName" formControlName="firstName" type="text">
+    </div>
+    
+    <div>
+      <label for="lastName">Last name</label>
+      <input id="lastName" formControlName="lastName" type="text">
+    </div>
+  
+    <div>
+      <label for="username">Username</label>
+      <input id="username" formControlName="username" type="text">
+    </div>
+    
+    <div>
+      <label for="city">City</label>
+      <input id="city" formControlName="city" type="text">
+    </div>
+    
+    <div>
+      <label for="state">State</label>
+      <select id="state" formControlName="state">
+        <option value="">Choose...</option>
+        <option *ngFor="let state of states" [value]="state">{{ state }}</option>
+      </select>
+    </div>
+    
+    <div>
+      <label for="zip">Zip</label>
+      <input id="zip" formControlName="zip" type="text">
+    </div>
+  
+    <div>
+      <input id="agree" formControlName="agree" type="checkbox">
+      <label for="agree">Agree to terms and conditions</label>
+    </div>
+  
+    <button type="button" (click)="onReset()">Reset form</button>
+    <button type="submit">Submit</button>
+  </form>

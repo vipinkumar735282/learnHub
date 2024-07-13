@@ -4,7 +4,7 @@ import { RegisterComponent } from "./pages/register/register.component";
 import { CallapiComponent } from "./pages/callapi/callapi.component";
 import { DynamicFormComponent } from "./dynamic-form/dynamic-form.component";
 import { IForm } from './interface/form.interface';
-import { registerFormConfig } from './constants/register-form.contant';
+// import { registerFormConfig } from './constants/register-form.contant';
 
 @Component({
     selector: 'app-root',
@@ -15,5 +15,5 @@ import { registerFormConfig } from './constants/register-form.contant';
 })
 export class AppComponent {
   title = 'LearnHub';
-  registerForm = registerFormConfig as IForm
+  // registerForm = registerFormConfig as IForm
 }

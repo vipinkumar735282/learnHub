@@ -1,94 +1,111 @@
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+// .container {
+//     width: 80%;
+//     margin: 0 auto;
+//     padding: 20px;
+//     background-color: #f9f9f9;
+//     border-radius: 8px;
+//     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+//   }
   
-  .header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
+//   .header {
+//     text-align: center;
+//     margin-bottom: 20px;
+//   }
   
-  .header h1 {
-    margin: 0;
-    color: white;
-    background-color: green;
-    padding: 10px 0;
-  }
+//   .header h1 {
+//     margin: 0;
+//     color: white;
+//     background-color: green;
+//     padding: 10px 0;
+//   }
   
-  .header h2 {
-    margin: 0;
-    background-color: #006400;
-    color: white;
-    padding: 10px 0;
-  }
+//   .header h2 {
+//     margin: 0;
+//     background-color: #006400;
+//     color: white;
+//     padding: 10px 0;
+//   }
   
-  .content {
-    display: flex;
-    justify-content: space-between;
-  }
+//   .content {
+//     display: flex;
+//     justify-content: space-between;
+//   }
   
-  .department-list {
-    flex: 1;
-    margin-right: 20px;
-  }
+//   .department-list {
+//     flex: 1;
+//     margin-right: 20px;
+//   }
   
-  .department-list table {
-    width: 100%;
-    border-collapse: collapse;
-  }
+//   .department-list table {
+//     width: 100%;
+//     border-collapse: collapse;
+//   }
   
-  .department-list th, .department-list td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
-  }
+//   .department-list th, .department-list td {
+//     border: 1px solid #ccc;
+//     padding: 10px;
+//     text-align: left;
+//   }
   
-  .new-department {
-    flex: 0 0 300px;
-  }
+//   .new-department {
+//     flex: 0 0 300px;
+//   }
   
-  .new-department h3 {
-    margin-top: 0;
-    background-color: #cccccc;
-    padding: 10px;
-    text-align: center;
-  }
+//   .new-department h3 {
+//     margin-top: 0;
+//     background-color: #cccccc;
+//     padding: 10px;
+//     text-align: center;
+//   }
   
-  .form-group {
-    margin-bottom: 15px;
-  }
+//   .form-group {
+//     margin-bottom: 15px;
+//   }
   
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-  }
+//   .form-group label {
+//     display: block;
+//     margin-bottom: 5px;
+//   }
   
-  .form-group input {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-  }
+//   .form-group input {
+//     width: 100%;
+//     padding: 8px;
+//     box-sizing: border-box;
+//   }
   
-  .buttons {
-    display: flex;
-    justify-content: space-between;
-  }
+//   .buttons {
+//     display: flex;
+//     justify-content: space-between;
+//   }
   
-  .buttons button {
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-  }
+//   .buttons button {
+//     padding: 10px 20px;
+//     border: none;
+//     cursor: pointer;
+//   }
   
-  .buttons button[type="reset"] {
-    background-color: #ccc;
-  }
+//   .buttons button[type="reset"] {
+//     background-color: #ccc;
+//   }
   
-  .buttons button[type="submit"] {
-    background-color: green;
-    color: white;
-  }
+//   .buttons button[type="submit"] {
+//     background-color: green;
+//     color: white;
+//   }
+
+div {
+  margin-bottom: 10px;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+input, select {
+  width: 200px;
+}
+
+button {
+  margin-right: 10px;
+}
