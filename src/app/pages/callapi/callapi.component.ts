@@ -11,6 +11,7 @@ import { ServiceService } from '../../service/service.service';
 })
 export class CallapiComponent {
   customerslist: any [] = [];
+  deptobj: any [] = [];
   userlist: any [] = [];
   // private getcustomerlis = 'https://jsonplaceholder.typicode.com/users';
   http = inject(HttpClient)
@@ -24,7 +25,16 @@ export class CallapiComponent {
       this.customerslist = res;
     })
    }
-
+  onsave(){
+    this.deptserv.saveNewDep(this.deptobj).subscribe((data:any)=>{
+      if(data.result){
+        this.getAllDep();
+      }else{
+        alert(data.message)
+      }
+    })
+  }
+  
  
   //  getData(variable: string): Observable<any> {
   //   const url = `${this.apiUrl}/data?param=${variable}`;

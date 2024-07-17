@@ -4,6 +4,7 @@ import { RegisterComponent } from "./pages/register/register.component";
 import { CallapiComponent } from "./pages/callapi/callapi.component";
 import { DynamicFormComponent } from "./dynamic-form/dynamic-form.component";
 import { IForm } from './interface/form.interface';
+import { HtmltopdfComponent } from "./htmltopdf/htmltopdf.component";
 // import { registerFormConfig } from './constants/register-form.contant';
 
 @Component({
@@ -11,7 +12,7 @@ import { IForm } from './interface/form.interface';
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
-    imports: [RouterOutlet, RegisterComponent, CallapiComponent, DynamicFormComponent]
+    imports: [RouterOutlet, RegisterComponent, CallapiComponent, DynamicFormComponent, HtmltopdfComponent]
 })
 export class AppComponent {
   title = 'LearnHub';
