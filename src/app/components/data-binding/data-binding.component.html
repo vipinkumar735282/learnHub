@@ -1,0 +1,211 @@
+<!-- <div class="row">
+    <div class="col-4">
+        one way dat bimding
+    </div>
+    <div class="col-4">
+        
+    </div>
+    <div class="col-4">
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-4">
+        Interpolation
+        {{courseName}}
+        <div>{{inputType}}</div>
+        <input type="text" value="{{courseName}}" placeholder="Enter Text">
+        <input type="{{inputType}}" />
+    </div>
+    <div class="col-4">
+        property Binding
+        <div class="{{myclassName}}">
+            Lorem ipsum dolor sit amet.
+        </div>
+        <input type="text" [value]="courseName">
+    </div>
+    <div class="col-4">
+      <button class="btn btn-success" (click)="showAlert('hey there are fine')">showbtn</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-4">
+        <button class="btn btn-success" (click)="changeCourseName()">changeName</button>
+        <input type="text" [(ngModel)]="courseName">{{courseName}} />
+        <input type="text" [(ngModel)]="courseName">
+        <select [(ngModel)]="stateName">
+            <option value="">select..</option>
+            <option value="gaya">gaya</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Ranchi">Ranchi</option>
+        </select>
+    </div>
+</div>
+<button type="button" class="btn btn-success">Succeghjhgdfj</button> -->
+
+<!-- restaurant-cards.component.html -->
+<!-- <div class="card-container">
+  <div class="card" *ngFor="let restaurant of restaurants">
+    <img [src]="restaurant.image" alt="Restaurant Image" class="card-img">
+    <div class="card-content">
+      <h3 class="card-title">{{ restaurant.name }}</h3>
+      <p class="card-description">{{ restaurant.description }}</p>
+      <div class="card-price">{{ restaurant.price }}</div>
+      <div class="card-location">{{ restaurant.location }}</div>
+      <div class="card-distance">{{ restaurant.distance }}</div>
+      <div class="card-rating">
+        <span class="rating">{{ restaurant.rating }}</span>
+      </div>
+      <div *ngIf="restaurant.offer" class="card-offer">
+        <span>{{ restaurant.offer }}</span>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- <div class="card-container">
+    <div class="card" *ngFor="let restaurant of restaurants">
+      <img [src]="restaurant.image" alt="Restaurant Image" class="card-img">
+      <div class="card-content">
+        <h3 class="card-title">{{ restaurant.name }}</h3>
+        <p class="card-description">{{ restaurant.description }}</p>
+        <div class="card-price">{{ restaurant.price}}</div>
+        <div class="card-location">{{ restaurant.location }}</div>
+        <div class="card-distance">{{ restaurant.distance }}</div>
+        <div class="card-rating">
+          <span class="rating">{{ restaurant.rating }}</span>
+        </div>
+        <div *ngIf="restaurant.offer" class="card-offer">
+          <span>{{ restaurant.offer }}</span>
+        </div>
+        <button (click)="addProduct(restaurant)">Add</button>
+      </div>
+    </div>
+  </div> -->
+
+<!-- <div class="facebook-cover">
+    <div class="left-section">
+      <h3 class="top-text">Vegetable</h3>
+      <h1 class="main-text">
+        Super <span class="highlight">Healthy</span>
+        <span class="sub-text">Vegetable</span>
+      </h1>
+      <p class="description">
+        Lorem ipsum is a pseudo-logo interested in web design, typography, layout, 
+        and printing in place of English to emphasize design elements over content.
+      </p>
+      <button class="order-btn">ORDER NOW</button>
+      <div class="contact-info">
+        <p>📞 +123-4455-7788</p>
+        <p>🌐 www.lorumipsum.com</p>
+      </div>
+    </div>
+    <div class="right-section">
+      <img src="/assets/image/d3.jpg" alt="Vegetable Basket" />
+    </div>
+  </div> -->
+
+<!-- Main Container for the Organic Grocery Website -->
+<div class="organic-grocery">
+  <!-- Header Section -->
+  <header class="header">
+    <div class="logo">Delicacy</div>
+    <nav class="nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="cart-btn">Cart</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-text">
+      <h1>Delicacy Organic Groceries</h1>
+      <p>
+        Fresh, healthy, and organic groceries delivered to your doorstep.
+        Experience the best quality fruits, vegetables, and much more.
+      </p>
+      <button class="shop-now-btn">Shop Now</button>
+    </div>
+    <div class="hero-image">
+      <img src="/assets/image/d1.jpg" alt="Organic Groceries" />
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products-section">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      <div class="product-item">
+        <img src="/assets/image/d3.jpg" alt="Product 1" />
+        <h3>Fresh Vegetables</h3>
+        <p>From organic farms directly to your table.</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-item">
+        <img src="/assets/image/d3.jpg" alt="Product 1" />
+        <h3>Fresh Vegetables</h3>
+        <p>From organic farms directly to your table.</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-item">
+        <img src="/assets/image/d2.jpg" alt="Product 2" />
+        <h3>Organic Fruits</h3>
+        <p>Handpicked fresh fruits for a healthier you.</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-item">
+        <img src="/assets/image/d1.jpg" alt="Product 3" />
+        <h3>Dairy Products</h3>
+        <p>Pure, fresh, and organic dairy products.</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-item">
+        <img src="/assets/image/d1.jpg" alt="Product 3" />
+        <h3>Dairy Products</h3>
+        <p>Pure, fresh, and organic dairy products.</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="product-grid">
+      <div class="product-item">
+        <img src="/assets/image/d3.jpg" alt="Product 1" />
+        <h3>Fresh Vegetables</h3>
+        <p>From organic farms directly to your table.</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-item">
+        <img src="/assets/image/d3.jpg" alt="Product 1" />
+        <h3>Fresh Vegetables</h3>
+        <p>From organic farms directly to your table.</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-item">
+        <img src="/assets/image/d2.jpg" alt="Product 2" />
+        <h3>Organic Fruits</h3>
+        <p>Handpicked fresh fruits for a healthier you.</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-item">
+        <img src="/assets/image/d1.jpg" alt="Product 3" />
+        <h3>Dairy Products</h3>
+        <p>Pure, fresh, and organic dairy products.</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-item">
+        <img src="/assets/image/d1.jpg" alt="Product 3" />
+        <h3>Dairy Products</h3>
+        <p>Pure, fresh, and organic dairy products.</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>&copy; 2024 Delicacy Organic Grocery. All rights reserved.</p>
+  </footer>
+</div>
